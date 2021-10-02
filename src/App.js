@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Navigation from './components/general/Nav';
+import styled from 'styled-components';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Projects from './pages/Projects';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+const Wrap = styled.div``;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navigation/>
+        <Switch>
+          <Route path="/" exact>
+            <Home/>
+          </Route>
+          <Route path="/Projects" exact>
+            <Projects/>
+          </Route>
+          <Route path="/About" exact>
+            <About/>
+          </Route>
+          <Route path="/Contact" exact>
+            <Contact/>
+          </Route>
+        </Switch>
+    </Router>
   );
 }
 

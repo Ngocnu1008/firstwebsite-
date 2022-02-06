@@ -113,7 +113,8 @@ const Wrap = styled.div`
         width: 100%;
         margin: auto;
         input{
-            width: 97%;
+            width: 95.9%;
+            margin: auto;
             padding: 10px 10px;
             font-size: 17px;
             cursor: pointer;
@@ -140,7 +141,7 @@ const Wrap = styled.div`
 
 function Contact(props) {
     useEffect(()=>{
-        window.scroll(0,2140);
+        window.scroll(0,2145);
     })
     return (
         <Wrap>

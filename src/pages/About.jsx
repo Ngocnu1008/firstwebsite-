@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Wrap = styled.div`
+    width: 100%;
     .Wrap_banner {
         position: relative;
         p {
             position: absolute;
             top: 47%;
             left: 41%;
-            // z-index: 2;
             font-size: 40px;
             color: white;
             strong{
@@ -115,11 +115,11 @@ const Wrap = styled.div`
     }
     .group_input{
         width: 100%;
-        margin: auto;
         input{
-            width: 97%;
+            width: 95.9%;
+            margin: auto;
             padding: 10px 10px;
-            font-size: 17px;
+            font-size: 16px;
             cursor: pointer;
         }
     }
@@ -139,12 +139,13 @@ const Wrap = styled.div`
         }
 
     }
+    
 
 `;
 
 function About(props) {
     useEffect(()=>{
-        window.scroll(0,1430);
+        window.scroll(0,1420);
     })
     return (
         <Wrap>

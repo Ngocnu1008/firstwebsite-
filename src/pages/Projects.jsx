@@ -8,7 +8,6 @@ const Wrap = styled.div`
             position: absolute;
             top: 47%;
             left: 41%;
-            // z-index: 2;
             font-size: 40px;
             color: white;
             strong{
@@ -19,8 +18,11 @@ const Wrap = styled.div`
         }
     }
     .banner{
-        width: 98%;
+        width: 100%;
         margin: auto;
+        img {
+            width: 50%;
+        }
     }
     h3{
         margin: 60px 0px; 
@@ -117,7 +119,8 @@ const Wrap = styled.div`
         width: 100%;
         margin: auto;
         input{
-            width: 97%;
+            width: 95.9%;
+            margin: auto;
             padding: 10px 10px;
             font-size: 17px;
             cursor: pointer;
@@ -139,12 +142,22 @@ const Wrap = styled.div`
         }
 
     }
-
+    @media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+        .Wrap_banner {
+            width: 100%;
+            .banner {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
 `;
 
 function Projects(props) {
     useEffect(()=>{
-        window.scroll(0, 800);
+        window.scroll(0, 400);
     })
     return (
         <Wrap>

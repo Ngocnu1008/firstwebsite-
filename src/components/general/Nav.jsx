@@ -10,6 +10,10 @@ const BigWrap = styled.div`
     background-color: white;
     width: 100%;
     box-shadow: 1px 3px 5px 0px rgb(0 0 0 / 10%);
+    @media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+        width: 100%;
+        margin: auto;
+    }
 `;
 const Wrap = styled.div`
     width: 95%;
@@ -19,12 +23,19 @@ const Wrap = styled.div`
     align-items: center;
     height: 55px;
     font-size: 18px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
 `;
 const Left = styled.div`
     display: flex;  
-    padding: 8px 16px; 
+    padding: 8px 16px;
+    box-sizing: border-box;
     p{
         margin-right: 10px;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
     } 
     &:hover{
         background-color: #cac3c3;
@@ -42,20 +53,22 @@ const Right = styled.div`
                 background-color: #cac3c3;
             }
         } 
-    }
-    a{
-        text-decoration: none;
-        color: black;
-    }   
+    }  
+    @media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+        display: flex;
+        justify-content: space
+    } 
 `;
 function Navigation(props) {
     return (
         <BigWrap>
             <Wrap>
-                <Left>
-                    <p><strong>BR</strong></p>
-                    <p>Architects</p>
-                </Left>
+                <Link to="/">
+                    <Left>
+                        <p><strong>BR</strong></p>
+                        <p>Architects</p>
+                    </Left>
+                </Link>
                 <Right>
                     <ul>
                         <Link to="/Projects"><li>Projects</li></Link>
@@ -63,7 +76,7 @@ function Navigation(props) {
                         <Link to="/Contact"><li>Contact</li></Link>
                     </ul>
                 </Right>
-        </Wrap>
+            </Wrap>
         </BigWrap>
     );
 }

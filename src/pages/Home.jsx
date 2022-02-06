@@ -8,13 +8,18 @@ const Wrap = styled.div`
             position: absolute;
             top: 47%;
             left: 41%;
-            // z-index: 2;
             font-size: 40px;
             color: white;
             strong{
                 padding: 5px 15px;
                 background: #2c2c2c;
                 margin-right: 10px;
+            }
+        }
+        .banner {
+            width: 100%;
+            img {
+                width: 100%;
             }
         }
     }
@@ -113,7 +118,8 @@ const Wrap = styled.div`
         width: 100%;
         margin: auto;
         input{
-            width: 97%;
+            width: 95.9%;
+            margin: auto;
             padding: 10px 10px;
             font-size: 17px;
             cursor: pointer;

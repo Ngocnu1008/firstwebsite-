@@ -121,7 +121,7 @@ const Wrap = styled.div`
             padding: 10px 10px;
             font-size: 16px;
             cursor: pointer;
-        }
+        } 
     }
     .copyright{
         margin-top: 5px;
@@ -190,7 +190,7 @@ function About(props) {
                 <div className="group_card">
                     <div className="card">
                         <img src="https://www.w3schools.com/w3images/team2.jpg" alt=""/>
-                        <h4>John Doe</h4>
+                        <h4>John Davies</h4>
                         <h5>CEO - FROUNDER</h5>
                         <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
                         <button>Contact</button>
